@@ -1,0 +1,26 @@
+﻿@model OperasWebSite.Models.Opera
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>@Model.Title</h2>
+<p>Desea eliminar esta opera?</p>
+
+@using (Html.BeginForm("Delete", "Opera", FormMethod.Post))
+{
+    <div>
+        <spam>@Html.DisplayNameFor(model => model.Compositor)</spam>
+        <spam>@Html.DisplayFor(model => model.Compositor)</spam>
+        <spam>@Html.DisplayNameFor(model => model.Year)</spam>
+        <spam>@Html.DisplayFor(model => model.Year)</spam>
+    </div>
+    <input type="submit" value="Delete " />
+}
+
+<p>
+    @Html.ActionLink("Go to index", "Index", "Opera")
+</p>
+
+
+
+
